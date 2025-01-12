@@ -1,0 +1,129 @@
+@use '../abstracts/variables' as v;
+
+.online {
+    background-color: v.$color-gray;
+    color: v.$color-brown;
+
+    &__doubts {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+        &--title {
+            font-family: 'Felix';
+            font-size: 3rem;
+            padding-top: 15vh;
+            padding-bottom: 10vh;
+            text-align: center;
+        }
+    }
+
+    &__accordion {
+        padding-bottom: 15vh;
+        &--item {
+            color: v.$color-brown !important;
+            font-size: 1.65rem;
+            background-color: transparent;
+            margin-bottom: 25px;
+         }
+
+        &--button {
+            font-weight: 300;
+            color: v.$color-brown !important;
+            font-size: 2.2rem !important;
+            background-color: transparent;
+
+            &::after {
+                transform: scale(1.5);
+                background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239e5741'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+            }
+            
+            &:not(.collapsed) {
+                background-color: transparent;
+
+                &::after {
+                    transform: scale(2) rotateZ(-180deg);
+                    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23702e1a'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+                }
+            }
+
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    &__questions {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+        &--title {
+            font-family: 'Felix';
+            font-size: 3rem;
+            padding-top: 10vh;
+            padding-bottom: 4vh;
+            text-align: center;
+        }
+
+        &--subtitle {
+            font-size: 2.5rem;
+            padding-bottom: 2vh;
+        }
+
+        &--text {
+            font-size: 1.75rem;
+            padding-bottom: 2vh;
+        }
+
+        &--button {
+            padding: 5px;
+            width: 100%;
+            border: none !important;
+            transition: all .05s;
+            position: relative;
+            color: v.$color-white;
+            font-size: 1.7rem;
+            font-weight: 500;
+            background-color: v.$color-brown;
+            will-change: contents;
+            width: 60%;
+            z-index: 1;
+            transform: translateX(-50%);
+            left: 50%;
+            margin-top: 10vh;
+
+            &:link, &:visited, &:hover, &:focus { 
+                color: v.$color-white;
+            }
+
+            &::after {  
+                background-color: v.$color-brown;
+                content: "";
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                transform: translateX(-50%);
+                position: absolute;
+                transition: all 0.4s;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+            }
+            
+            &:hover {
+                transform: translateY(-.2rem) translateX(-50%);
+                box-shadow: 0 1rem 2rem rgba(v.$color-brown, 0.2);
+                
+                &::after {
+                    transform: translateX(-50%) scaleX(1.1) scaleY(1.5);
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+        } 
+    }
+}

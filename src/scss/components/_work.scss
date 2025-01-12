@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as v;
+
+.work {
+    margin-top: -5vh;
+    background-color: v.$color-gray;
+    color: v.$color-brown;
+
+    &__title {
+        font-size: 3.5rem;
+        font-family: 'Felix';
+        text-align: center;
+        padding-top: 20vh;
+        padding-bottom: 15vh;
+    }
+
+    &__text {
+        margin-bottom: 0;
+        font-size: 1.75rem;
+        max-width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 15vh;
+    }
+}

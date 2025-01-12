@@ -1,0 +1,126 @@
+@use '../abstracts/variables' as v;
+
+.footer {
+    background-color: v.$color-brown;
+    color: v.$color-white;
+    padding-bottom: 5px;
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    &__address {
+        width: 30%;
+        
+        &--title {
+            font-family: 'Felix';
+            font-size: 2rem;
+        }
+
+        &--description {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        &--map {
+            padding: 5px;
+            border: 1px solid v.$color-white;
+            border-radius: 3px;
+            height: 75%;
+        }
+    }
+
+    &__discover {
+        width: 30%;
+
+        &--explore {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-bottom: 15px;
+            &-title {
+                font-family: 'Felix';
+                font-size: 2rem;
+            }
+
+            &-button {
+                transition: all .3s;
+                border: 1px solid v.$color-white;
+                color: v.$color-white;
+                font-size: 1.3rem;
+                font-weight: 300;
+                width: 100%;
+                padding: 5px;
+                border-radius: 3px;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.116);
+                }
+            }
+        }
+
+        &--media {
+            &-title {
+                font-family: 'Felix';
+                font-size: 2rem;
+            }
+
+            &-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                &-1 {
+                    &__img {
+                        height: 40px;
+                    }
+                }
+
+                &-2 {
+                    &__img {
+                        height: 45px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__workdays {
+        width: 30%;
+
+        &--title {
+            font-family: 'Felix';
+            font-size: 2rem;
+        }
+
+        &--container {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        &--day {
+            font-size: 1.5rem;
+            border-bottom: solid 1px v.$color-white;
+            padding-top: 5px;
+            width: 60%;
+            &__week {
+            }
+
+            &__hours {
+                float: right;
+            }
+        }
+    }
+
+    &__disclaimer {
+        display: block;
+        padding-top: 20px;
+        margin-left: 5px;
+    }
+}

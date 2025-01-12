@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as v;
+
+
+ .about-section {
+    &__title {
+        text-align: center;
+        background-image: linear-gradient(to right, v.$color-strong-blue, v.$color-red);
+        background-clip: text;
+        color: transparent;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+ }
+
+.products {
+    &__title {
+        background-image: linear-gradient(to right, v.$color-strong-blue, v.$color-red);
+        background-clip: text;
+        color: transparent;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+}
+
+.card { 
+    &__details {
+        li {
+            text-align: center;
+            font-size: 1.6rem;
+            color: darken(v.$color-white, 3%);
+            font-weight: 500;
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        background-clip: text;
+        color: transparent;
+        font-weight: 700;
+        &--1 {
+            background-image: linear-gradient(to right, v.$color-strong-blue, v.$color-red);
+        }
+        &--2 {
+            background-image: linear-gradient(to right, v.$color-light-blue, v.$color-red);
+        }
+        &--3 {
+            background-image: linear-gradient(to right, v.$color-light-blue -90%, v.$color-red);
+        }
+    }
+    
+    &__cta {
+        text-align: center;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: darken(v.$color-white, 70%);
+        font-weight: 600;
+    }
+}

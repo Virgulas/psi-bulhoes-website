@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as v;
+
+.toast {
+  animation: fade-in-left .7s ease;
+  animation-delay: .1s;
+  animation-fill-mode: backwards;
+
+    &__header {
+      font-size: 1.33rem;
+      font-weight: 400;
+      padding-left: 3px;
+    }
+
+    &__image {
+        height: 35px;
+        border-radius: 50%;
+        padding-bottom: 5px;
+    }
+
+    &__icon {
+      height: 8px;
+    }
+
+    &__text {
+      display: inline-block;
+      font-size: 12px;
+      margin-bottom: 0;
+      margin-left: 5px;
+      color: rgb(109, 109, 109);
+    }
+}
+
+.toast-container {
+  z-index: 99999;
+}

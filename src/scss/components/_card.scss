@@ -1,0 +1,114 @@
+@use '../abstracts/variables' as v;
+
+.about-section__card {
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
+    animation: fade-in-left .7s ease;
+    animation-delay: .1s;
+    animation-fill-mode: backwards;
+
+    &__side {
+        transition: all 1.5s ease;
+        backface-visibility: hidden;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+        &--back {
+            background-color: #9C4D32;
+            transform: rotateY(-180deg);
+            border-radius: 5px !important; 
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25), 0 3px 10px 0px rgba(0, 0, 0, 0.05) !important;
+            
+            &-header {
+                display: flex;
+                text-align: start;
+                flex-direction: column;
+                width: 100%;
+                color: v.$color-white;
+                padding-left: 30px;
+                &__title {
+                    padding-top: 30px;
+                    font-family: 'FELIX';
+                    line-height: 10px;
+                    font-size: 3rem;
+                    letter-spacing: 2px;
+                }
+
+                &__small {
+                    font-family: 'DMSans';
+                    font-weight: 100;
+                    font-size: 1.4rem;
+                }
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                margin-top: 30px;
+
+                &__ul {
+                list-style: none;
+                margin: 0;
+                padding-left: 30px;
+                font-size: 1.6rem;
+                font-family: 'DMSans';
+                font-weight: 200;
+                text-align: start;
+
+                    &-icon {
+                        font-size: 2.5rem;
+                    }
+                    
+                    a {
+                        color: v.$color-white;
+                        text-decoration: none; 
+                    }
+                    li {
+                        padding-bottom: .6rem;
+                    }
+                }
+
+                &__img {
+                    height: 60%;
+                    padding-right: 30px;
+                }
+            }
+            
+        }
+        &--front {
+            background-color: white;
+            border-radius: 5px !important; 
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25), 0 3px 10px 0px rgba(0, 0, 0, 0.05) !important;
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+

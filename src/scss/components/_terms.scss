@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as v;
+
+.terms {
+    background-color: v.$color-gray;
+    color: v.$color-brown;
+    &__title {
+        font-family: 'Felix';
+        font-size: 2.5rem;
+        padding-bottom: 20vh;
+        padding-top: 20vh;
+        text-align: center;
+    }
+
+    &__ul {
+        list-style: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        padding-bottom: 25vh;
+        max-width: 90%;
+
+        &--li {
+        padding: 0;
+        margin: 0;
+            &-title {
+                font-weight: 600;
+                padding-bottom: 10px;
+            }
+
+            &-text {
+            font-size: 1.75rem;
+            margin: 0;
+            padding-bottom: 2rem;
+            }
+        }
+    }
+}

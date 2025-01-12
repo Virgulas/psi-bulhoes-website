@@ -1,0 +1,53 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mixins;
+
+.navbar-fill {
+    height: 50px;
+}
+
+.nav-min {
+    min-height: 50px;
+}
+
+.nav {
+    box-shadow: 0 .3rem .5rem rgba(v.$color-pink, .5);
+    
+    &--logo {
+        height: 100%;
+        &:link, &:visited {
+            color: v.$color-brown;
+            font-family: 'DMSans';
+            font-weight: 200;
+            font-size: 2rem;
+        }
+        &-text {
+            display: inline-block;
+            height: 100%;
+            margin-left: 5px;
+        }
+    }
+
+    &--hyperlink {
+        font-size: 1.3rem;
+        font-weight: 400;
+        &:link, &:visited {
+            transition: all .2s;
+            color: v.$color-brown;
+            transform: translateZ(0);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        &_active {
+            &:link, &:visited {
+                font-size: 1.3rem;
+                font-weight: 400;
+                transform: translateX(10%) scale(1.2);
+                max-width: 50%;
+                color: v.$color-brown;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    }
+}
+

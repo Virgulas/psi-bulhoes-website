@@ -1,0 +1,173 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as v;
+
+header {
+    position: relative;
+    height: 100vh;
+    z-index:5;    
+}
+
+.shadow-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;   
+}
+
+.header-shadow {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 60px;
+    top: -5%;
+    left: 0;
+    background-color: v.$color-brown;
+    clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+    z-index: 1;
+
+}
+
+.header-shadow-2 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 60px;
+    top: 0;
+    left: 0;
+    background-color: rgb(112, 46, 26);
+    clip-path: polygon(0 10vh, 100% 0, 100% 80vh, 0 100%);
+    z-index: 2;   
+
+
+}
+
+.header-brand {
+    position: absolute;
+    font-family: "DMSans";
+    font-size: 2.5rem;
+    color: v.$color-brown;
+    z-index: 0;
+    top: 10%;
+
+    left: 2%;
+    transform:rotate(-2deg);
+    text-shadow: -1px -1px 0 rgb(112, 46, 26);
+    z-index: 2;   
+ 
+}
+
+.header-brand-2 {
+    position: absolute;
+    font-family: "DMSans";
+    font-size: 2.5em;
+    color: v.$color-brown;
+    z-index: 0;
+    top: 95%;
+    right: 2%;
+    transform:rotate(-2deg);
+    text-shadow: -1px -1px 0 rgb(112, 46, 26);
+    z-index: 2;   
+ 
+}
+    
+.header-container {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 15vh, 100% 0, 100% 80vh, 0 100%);
+    z-index: 5;
+}
+
+.header__text {
+    position: absolute;
+    user-select: none;
+    width: 100%;
+    top: 30%;
+    z-index: 4;
+    text-align: center;
+    font-family: 'DMSans';
+    font-weight: 100;
+    font-size: 3.5rem;
+    color: v.$color-white;
+
+    &--1 {
+        animation: slide-in-top 3s;
+        animation-delay: .5s;
+        animation-fill-mode: backwards;
+    }
+    &--2 {
+        animation: slide-in-bottom 3s;
+        animation-delay: 1.5s;
+        animation-fill-mode: backwards;
+     }
+    &--3 { 
+        animation: slide-in-top 3s;
+        animation-delay: 2.5s;
+        animation-fill-mode: backwards;
+    }
+    &--4 {  
+        animation: slide-in-right 1s;
+        animation-delay: 1.5s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.header__buttons {
+    position: absolute;
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+    top: 55%;
+    z-index: 1;
+    font-size: 3.5rem;
+
+    &--text {
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
+        color: v.$color-white;   
+    }
+
+    &-container {
+        display: flex;
+        user-select: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mixins.no-drag;
+        transition: all .3s;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        border: solid 1px v.$color-white;
+        &:visited, &:link {
+            color: v.$color-white;
+        }
+        &:hover {
+            background-image: linear-gradient(to bottom, v.$color-brown, v.$color-red);
+            box-shadow: 0 .8rem .8rem rgba(rgb(28, 0, 0), .8);
+            transform: translateY(-2px);
+            color: rgba(v.$color-white, 1);
+            border: none;
+        }
+        &:active {
+            box-shadow: 0 .3rem .6rem rgba(rgb(28, 0, 0), .8);
+            transform: translateY(0);
+        }
+    }
+}
+
+

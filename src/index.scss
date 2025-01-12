@@ -1,0 +1,96 @@
+//imports
+
+@use './scss/base/utilities';
+@use './scss/base/animations';
+@use './scss/base/typography';
+@use './scss/components/card';
+@use './scss/components/header';
+@use './scss/components/button';
+@use './scss/components/footer';
+@use './scss/components/nav';
+@use './scss/components/products';
+@use './scss/components/about';
+@use './scss/components/aboutMe';
+@use './scss/components/more';
+@use './scss/components/welcome';
+@use './scss/components/aboutDesc';
+@use './scss/components/reviews';
+@use './scss/components/terms';
+@use './scss/components/formation';
+@use './scss/components/work';
+@use './scss/components/toast';
+@use './scss/containers/online';
+@use './scss//layout/bg-video';
+@use './scss/abstracts/responsive';
+
+@font-face {
+  font-family: 'Felix'; /* Choose a name for your font */
+  src: url('./fonts/FelixTitling.ttf') format('truetype'); /* Replace with your font file's path */
+}
+
+@font-face {
+  font-family: 'FelixBold'; /* Choose a name for your font */
+  src: url('./fonts/FelixTitling_Bold.ttf') format('truetype'); /* Replace with your font file's path */
+}
+
+@font-face {
+  font-family: 'Metro';
+  src: url('./fonts/Metropolis-Thin.otf') format('opentype'); 
+}
+
+@font-face {
+  font-family: 'Nourd_bold';
+  src: url('./fonts/nourd_bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nourd';
+  src: url('./fonts/nourd_regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('./fonts/DMSans.ttf') format('truetype');
+}
+
+//basic fixes
+:root {
+    font-size: 62.5%;
+    line-height: 24px;
+    font-weight: 400;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    box-sizing: border-box;
+    font-family: 'DMSans';
+  }
+
+  input,
+  textarea,
+  button,
+  select,
+  a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  } 
+
+  @media only screen and (max-width: 400px) {
+    :root {
+      font-size: 42.5%;
+    }
+  }
+
+  @media only screen and (max-height: 400px) {
+    :root {
+      font-size: 42.5%;
+    }
+  }
