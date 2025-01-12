@@ -42,7 +42,7 @@ To run this project locally:
 2. Navigate to the project folder:
 
    ```bash
-   cd psi-bulhoes
+   cd <folder_name>
    ```
 
 3. Install dependencies:
