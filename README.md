@@ -85,4 +85,4 @@ This project was commissioned and is not open to contributions. For inquiries, p
 
 ## License
 
-This project is licensed under the [MIT License].
+This project is licensed under the [MIT License](LICENSE).
